@@ -1,3 +1,5 @@
+let ui = new UI()
+
 document.querySelector(".submit").addEventListener("click",submited);
 function submited(e){
     e.preventDefault();
@@ -6,8 +8,8 @@ function submited(e){
     const category = document.querySelector("#category").value;
     
     if(input !== "" || category !== "" || country !== ""){
-        console.log("true")
+        ui.removeMSG();
     }else{
-        console.log("false")
+        ui.printMSG("please Complited at last one filds");
     }
 }
